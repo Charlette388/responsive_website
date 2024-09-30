@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #00aaff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('header-bg.jpg') no-repeat center center/cover;
+}
+
+.header h1 {
+    font-size: 50px;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+}
+
+.header p {
+    font-size: 24px;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+}
+
+.glowing-button {
+    background-color: #050b6300;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.glowing-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.glowing-button:hover::before {
+    transform: scaleX(1);
+}
+
+.glowing-button:hover {
+    background-color: #0088cc;
+    box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
+}
+
+.header .social-icons {
+    margin-top: 20px;
+}
+
+.header .social-icons a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.header .social-icons a:hover {
+    color: #0088cc;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+}
+
+.about, .services, .portfolio, .contact {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px #00aaff;
+}
+
+.profile-img, .project img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover, .project img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
+}
